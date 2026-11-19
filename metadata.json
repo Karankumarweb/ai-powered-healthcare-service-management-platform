@@ -1,0 +1,6 @@
+{
+  "name": "AI-Powered Healthcare Service Management Platform",
+  "description": "Architecture, database schema, and phase-by-phase engineering blueprint for a Java 17, Spring Boot 3, Microservices, PostgreSQL, Spring AI, and React healthcare platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,33 @@
+# Compiled class files
+*.class
+target/
+build/
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# IDE & OS
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Environment variables (never commit real secrets)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+
+# Node / React frontend
+frontend/healthcare-ui/node_modules/
+frontend/healthcare-ui/dist/
+frontend/healthcare-ui/.vite/
+
+# Docker volumes
+pgdata/
