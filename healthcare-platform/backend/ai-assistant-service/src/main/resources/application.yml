@@ -1,3 +1,4 @@
+
 server:
   port: 8086
 
@@ -5,11 +6,11 @@ spring:
   application:
     name: ai-assistant-service
   ai:
-    openai:
-      api-key: ${OPENAI_API_KEY}
+    ollama:
+      base-url: http://localhost:11434
       chat:
         options:
-          model: ${OPENAI_CHAT_MODEL:gpt-4o-mini}
+          model: qwen2.5:3b
           temperature: 0.3
 
 jwt:

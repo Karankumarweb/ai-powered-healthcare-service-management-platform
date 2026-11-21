@@ -4,16 +4,19 @@ server:
 spring:
   application:
     name: patient-service
+
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:healthcare_platform}?currentSchema=patient_schema
-    username: ${POSTGRES_USER:healthcare_admin}
-    password: ${POSTGRES_PASSWORD:change_me}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/patient_schema
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        default_schema: patient_schema
+        format_sql: true
 
 jwt:
   secret: ${JWT_SECRET}

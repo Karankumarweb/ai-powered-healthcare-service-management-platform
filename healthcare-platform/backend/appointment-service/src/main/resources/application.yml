@@ -4,16 +4,19 @@ server:
 spring:
   application:
     name: appointment-service
+
   datasource:
-    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:healthcare_platform}?currentSchema=appointment_schema
-    username: ${POSTGRES_USER:healthcare_admin}
-    password: ${POSTGRES_PASSWORD:change_me}
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/appointment_schema
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
   jpa:
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
-        default_schema: appointment_schema
+        format_sql: true
 
 services:
   patient-url: ${PATIENT_SERVICE_URL:http://localhost:8082}
